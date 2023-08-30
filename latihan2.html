@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000000;
+}
+
+header {
+  background-color: #FF9999;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000000;
+}
+
+nav {
+  float: left;
+  width: 20%;
+  height: 350px; 
+  background: #FFE5CC;
+  padding: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000000;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 40%;
+  background-color: #ffffff;
+  height: 350px; 
+}
+gambar { 
+  float: left;
+  padding: 20px;
+  width: 40%;
+  background-color: #ffffff;
+  height: 350px; 
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #FFE5CC;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000000;
+}
+
+
+@media (max-width: 600px) {
+  nav, article,gambar {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Ways To Spend Time Alone</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="#">Going For A Walk</a></li>
+      <li><a href="#">Bake a Cake</a></li>
+      <li><a href="#">Learn New Skill</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Going For A Walk</h1>
+    <p>Walking meetings were very productive for Steve Jobs. Being outside inspired William Wordsworth's creativity. Aristotle preached while walking, while Henry David Thoreau did his greatest thinking while strolling around.</p>
+    <p>Walking may spark conversation, strengthen relationships, spark creativity, promote mindfulness, reduce stress, and boost productivity. Walking also benefits both physical and emotional health.</p>
+  </article>
+  <gambar>
+  <img src="Walking.jpg"
+  height= "200px"></img>
+  <p> Source : (Weidenfeld, 2020)</p>
+  </gambar>
+</section>
+
+<footer>
+  <p>Copyright @NisrinaAzza</p>
+</footer>
+
+</body>
+</html>
+
