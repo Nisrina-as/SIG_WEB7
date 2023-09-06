@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Latihan 5</title>
+	<style>
+		/* Style semua kolom input */
+		input {
+		width: 40%;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-sizing: border-box;
+		margin-top: 6px;
+		margin-bottom: 16px;
+		}
+		/* Style tombol submit */
+		input[type=submit] {
+		background-color: #04AA6D;
+		color: white;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>JavaScript untuk Menampilkan Bilangan Fibonacci </h1>
+	<p>Masukkan angka untuk menghasilkan deret Bilangan Fibonacci.</p>
+	<input type="number" id="limit" value="0">
+	<button onclick="myFunction()">Tampilkan</button>
+
+	<p id="keluaran"></p>
+	
+<script>
+	function myFunction() {
+		var n = document.getElementById("limit").value;
+		document.getElementById("keluaran").innerHTML = fibonacciGenerator (n);
+	}
+
+		var urut = [0];
+		var angkaSebelum = 1;
+		var angkan = 0;
+		var sum = 0;
+ 
+	function fibonacciGenerator (n) {
+		while (urut.length < n) {
+		sum = angkaSebelum + angkan;
+		angkaSebelum = angkan;
+		angkan = sum;
+		urut.push(sum);  
+    }
+    return (urut);
+}
+</script>
+</body>
+</html>

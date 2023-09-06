@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        h1 {
+        text-align:left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hitung faktorial dari input</h1>
+    <h2>Masukkan sembarang angka</h2>
+    
+    <input type="number" id="angka">
+    <button onclick="calculate()">Hitung</button><br>  
+    <p id="isi"></p>
+    <p id="tulis"></p>
+        <script>
+            function factorial (n) {
+                if (n === 0) {
+                    return 1;
+                }
+                return n * factorial (n - 1);
+             document.getElementById("isi").innerHTML = factorial(angka);
+            }
+           
+        </script>
+        <script>
+            function calculate() {
+                var angka, isi;
+                angka = document.getElementById("angka").value;
+                isi = document.getElementById("isi").value= factorial(angka);
+                var txt ="Angka faktorial dari " + angka + " adalah : " + isi;
+                document.getElementById("tulis").innerHTML=txt;
+            }
+        </script>  
+</body>
+</html>
