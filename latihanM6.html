@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
+<title>Leaflet Web Map 2</title>
+
+<style>
+    #map {
+        height: calc(100vh - 60px);
+    }
+
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+          <a class="navbar-brand" href="latihanM6.html">
+            <img src="https://cdn.icon-icons.com/icons2/2620/PNG/512/among_us_player_red_icon_156942.png" alt="..." height="36">KiwKiw
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0"> <button class="btn btn-outline-success my-2 my-sm-0">Lokasi saya</button> </form>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Menu
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">History</a></li>
+                  <li><a class="dropdown-item" href="#">Work</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Sign In</a></li>
+                  <li><a class="dropdown-item" href="#">Log In</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div id="map"></div>
+<script src="jogja2.js"></script>
+<script>
+    var map = L.map('map',{center: [-7.79558, 110.36949], zoom: 15});
+
+    var esri = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA,USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS UserCommunity'}).addTo(map);
+    var carto = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png', {attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>&copy; <a href="http://cartodb.com/attributions">CartoDB</a>',subdomains: 'abcd',maxZoom: 19});
+    var baseMaps = {"Citra Satelit": esri,"Peta Carto": carto};
+
+    var gunkid = L.marker([-7.9767345464945585, 110.59832688357729]).bindPopup('Kabupaten Gunungkidul'),
+        sleman = L.marker([-7.694449789318499, 110.3929264703851]).bindPopup('Kabupaten Sleman'),
+        kupro = L.marker([-7.807629335940222, 110.15431421236511]).bindPopup('Kabupaten Kulon Progo'),
+        jogjakota = L.marker([-7.800697369680355, 110.37312700022403]).bindPopup('Kota Yogyakarta'),
+        mbantul = L.marker([-7.8988377717528895, 110.35312197438722]).bindPopup('Kabupaten Bantul');
+    var jogja = L.layerGroup([gunkid, kupro, jogjakota, mbantul, sleman]);
+    var overlayMaps = {"Jogja": jogja};
+
+    L.control.layers(baseMaps, overlayMaps).addTo(map);
+    L.geoJSON(jogjageojson,{style: function(feature) {switch (feature.properties.KABUPATEN) {case 'Gunung Kidul': return {color: "#ff9900"};case 'Sleman': return {color: "red"};case 'Bantul': return {color: "blue"};case 'Yogyakarta': return {color: "green"};case 'Kulon Progo': return {color: "magenta"};}},onEachFeature: function (feature, layer) {layer.bindPopup('Kecamatan ' +'<strong>' +feature.properties.KECAMATAN +'</strong>');}}).addTo(map);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
+</body>
+</html>
