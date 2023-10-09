@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html> 
 <html> 
 	<head> 
@@ -30,4 +31,34 @@
 		
 		</script> 
 	</body> 
+=======
+<!DOCTYPE html> 
+<html> 
+	<head> 
+    	<title>Leaflet Web Map</title> 
+    	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /> 
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script> 
+	
+		<style> 
+		#map { 
+    	width: 960px; 
+    	height: 500px; 
+    	}
+		</style> 
+	</head> 
+	<body>  
+		<div id="map"></div> 
+		<script>
+		var map = L.map('map',{ 
+        center: [-7.3175, 110.4970], 
+        zoom: 15
+        });  
+
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
+		
+		 var marker = L.marker([-7.357981723356967, 110.52605308904353]).bindPopup('Kota Salatiga - Rumah Nisrina Azza').addTo(map); 
+		
+		</script> 
+	</body> 
+>>>>>>> edae9fc5c53576af0ad03998ad525a4a2618293a
 </html>
