@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"crossorigin="anonymous">
+	<title>UTS_456164</title> 
+    <style>
+        #map {
+        height: calc(100vh - 60px);
+        }
+        .center {
+        text-align: center;
+        }
+        table, td {
+        border: 1px solid black;
+        }
+    </style>
+	</head>
+	<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+            <div class="container">
+              <a class="navbar-brand" href="UTS_456164.html">
+                <img src="https://cdn.icon-icons.com/icons2/2620/PNG/512/among_us_player_red_icon_156942.png" alt="..." height="36">KiwKiw
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#createby">Penulis</a>
+                      </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#about">Essai</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#lokasifav">Favorite Places</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#end">Selesai</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+        <div class="center"><h1 class="mb-05">Ujian Tengah Semester</h1>
+        <p class="mb-05"><i>More Info : <a href="https://geodesi.ugm.ac.id/">Teknik Geodesi</a></i></p>
+        </div>
+        <hr class="mb-20"/>
+        <div class="container-fluid p-0">
+            <section class="essai-section" id="createby">
+            <div class="essai-section-content">  
+                <table styles="width:100%" border="1px solid black;">
+                    <tr>
+                    <td><b>Nama</b></td>
+                    <td>Nisrina Azza Salma</td>
+                     </tr>
+                    <tr>
+                    <td><b>NIM</b></td>
+                    <td>20/456164/TK/50294</td>
+                    </tr>
+                   </table>
+            </div>
+            </div>
+            </section>
+            <hr class="mb-50"/>
+            <!-- About-->
+            <section class="essai-section" id="about">
+                <div class="essai-section-content">
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-20">
+                    <div class="flex-grow-1">
+                    <h2 class="mb-20">
+                        HTML, CSS, dan JavaScript
+                        <span class style="color:red;"="text-primary">- Basic Explanation</span>
+                    </h2>
+                    <p>HTML dan CSS adalah Markup Language, untuk mengatur komponen dan tampilan sebuah halaman Web
+                        Javascript adalah Bahasa pemrograman Web</p>
+                    <h3 class="mb-05">
+                        HTML
+                    </h3>
+                    <p>HTML adalah inti dari setiap halaman web, terlepas dari kompleksitas situs atau jumlah teknologi yang terlibat. Ini adalah keterampilan yang sangat penting bagi setiap profesional web. Bahasa ini merupakan titik awal bagi siapa saja yang belajar cara membuat konten untuk web.</p>
+                    <p>HTML adalah singkatan dari HyperText Markup Language. "Bahasa markah" berarti bahwa, daripada menggunakan bahasa pemrograman untuk menjalankan fungsi, HTML menggunakan tag untuk mengidentifikasi berbagai jenis konten dan tujuan yang dilayaninya pada halaman web.</p>
+                    <h3 class="mb-05">
+                        CSS
+                    </h3>
+                    <p>CSS adalah singkatan dari Cascading Style Sheets. Bahasa pemrograman ini menentukan bagaimana elemen HTML sebuah situs web seharusnya muncul di bagian depan halaman. HTML menyediakan alat mentah yang diperlukan untuk menyusun konten di situs web. Di sisi lain, CSS membantu menata konten ini sehingga terlihat oleh pengguna sesuai dengan yang diinginkan. Bahasa-bahasa ini dipisahkan untuk memastikan situs web dibangun dengan benar sebelum diformat ulang.</p>
+                    </div>
+                    </div>
+                    <h3 class="mb-05">
+                        JavaScript
+                    </h3>
+                    <p>JavaScript adalah bahasa yang lebih rumit daripada HTML atau CSS, dan tidak dirilis dalam bentuk beta sampai tahun 1995. Saat ini, JavaScript didukung oleh semua peramban web modern dan digunakan di hampir semua situs di web untuk fungsionalitas yang lebih kuat dan kompleks.</p>
+                    <p>JavaScript adalah bahasa pemrograman berbasis logika yang dapat digunakan untuk memodifikasi konten situs web dan membuatnya berperilaku dengan cara yang berbeda sebagai respons terhadap tindakan pengguna. Penggunaan umum JavaScript meliputi kotak konfirmasi, ajakan bertindak, dan menambahkan identitas baru pada informasi yang sudah ada.</p> 
+                    <p>Singkatnya, JavaScript adalah bahasa pemrograman yang memungkinkan pengembang web mendesain situs interaktif. Sebagian besar perilaku dinamis yang akan Anda lihat di halaman web adalah berkat JavaScript, yang menambah kontrol dan perilaku default browser.</p>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                    <h2 class="mb-10">Bootstrap <span class style="color:rgb(17, 0, 255);"="text-primary">- Basic Explanation</span>
+                    </h2>
+                    <p>Bootstrap adalah framework web development berbasis HTML, CSS, dan JavaScript yang dirancang untuk mempercepat proses pengembangan web responsive dan mobile-first (memprioritaskan perangkat seluler).</p>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="mb-10"/>
+            <section class="essai-section" id="lokasifav">
+            <div class="essai-section-content">
+            <h3>Lokasi Favorit</h3>
+            <div id="map"></div>
+            <script>
+                var map = L.map('map',{center: [-7.77166241768102, 110.37808156063242], zoom: 15});
+            
+                var esri = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA,USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS UserCommunity'}).addTo(map);
+                var carto = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png', {attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>&copy; <a href="http://cartodb.com/attributions">CartoDB</a>',subdomains: 'abcd',maxZoom: 19});
+                var baseMaps = {"Citra Satelit": esri,"Peta Carto": carto};
+            
+                var gsp = L.marker([-7.77007073047612, 110.37786784014058]).bindPopup('Grha Saba Pramana'),
+                    pujale = L.marker([-7.7714741521743536, 110.3814765759754]).bindPopup('Pusat Jajanan Lembah'),
+                    wisdom = L.marker([-7.770338900612086, 110.38197277714104]).bindPopup('Wisdom Park'),
+                    sglc = L.marker([-7.765524614441295, 110.3722714156115]).bindPopup('Smart Green Learning Center'),
+                    maskam = L.marker([-7.773164162346125, 110.37988141792151]).bindPopup('Masjid Kampus UGM');
+                var favplaces = L.layerGroup([gsp, pujale, wisdom, sglc, maskam]);
+                var overlayMaps = {"Tempat Favorite": favplaces};
+            
+                L.control.layers(baseMaps, overlayMaps).addTo(map);
+            </script>
+            </section>
+            <hr class="mb-10"/>
+            <section class="essai-section" id="end">
+            <div class="essai-section-content">
+            <h3>Validasi Pekerjaan</h3>
+
+            <p>Apabila pekerjaan telah selesai, silahkan isi password di bawah ini!</p>
+            
+            <form>
+              <label for="pwd">Password:</label><br>
+              <input type="password" id="pwd" name="pwd"><br>
+              <button type="submit"  value = "submit" onclick = "validatePassword();">Submit</button>
+            </form>
+            <script type = "text/javascript">
+                var password = document.getElementById("pwd");
+                function validatePassword(){
+                    if(password.value != "Selesai"){
+                        alert("error");
+                    }
+                    else {
+                        alert("Good Job ! ");
+                    }
+                }
+            </script>
+            </div>
+            </section>
+            
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"crossorigin="anonymous"></script>
+	</body>
+</html>
+        
